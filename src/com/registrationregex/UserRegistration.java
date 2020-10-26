@@ -64,13 +64,13 @@ public class UserRegistration {
 	
 	static void validatePassword(String password) {
 		String passwordRegex = "[\\w\\W]{8,}";
-		String passwordRegex2 = ".*[A-Z].*";
 
 		if (Pattern.compile(passwordRegex).matcher(password).matches() &&
-				Pattern.compile(passwordRegex2).matcher(password).matches())
+				Pattern.compile(".*[A-Z].*").matcher(password).matches() &&
+				Pattern.compile(".*[0-9].*").matcher(password).matches())
 			System.out.println("Valid");
 		else
-			System.out.println("Password should contain minimum 8 characters and atleast 1 uppercase.");
+			System.out.println("Password should contain minimum 8 characters, atleast 1 uppercase and atleast 1 numeric number.");
 	}
 
 }
