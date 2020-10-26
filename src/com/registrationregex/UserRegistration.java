@@ -13,6 +13,11 @@ public class UserRegistration {
 		System.out.println("Enter First Name :");
 		String firstName = sc.next();
 		validateName(firstName);
+		
+		System.out.println("Enter Last Name :");
+		String lastName = sc.next();
+		validateName(lastName);
+		
 		sc.close();
 	}
 	
@@ -22,6 +27,5 @@ public class UserRegistration {
 			System.out.println("Valid");
 		else
 		    System.out.println("Name should start with capital letter and need min 3 characters.");
-
 	}
 }
